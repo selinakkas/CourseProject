@@ -1,0 +1,55 @@
+@model Candidate
+
+<div class="display-6">
+    Apply
+</div>
+
+<form method="post" asp-action="Apply">
+    <div class="form-group">
+        <label asp-for="Email" class="mt-4"></label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FirstName" class="mt-4"></label>
+        <input asp-for="FirstName" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName" class="mt-4"></label>
+        <input asp-for="LastName" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age" class="mt-4"></label>
+        <select asp-for="Age" class="form-control">
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+    </div>
+
+    <fieldset class="mt-4">
+        <legend>Select One Course</legend>
+        <p>
+            <input type="radio" asp-for="SelectedCourse" id="mvc" value="ASP.NET Core MVC">
+            <label class="mt-1">ASP.NET Core MVC</label>
+        </p>
+        <p>
+            <input type="radio" asp-for="SelectedCourse" id="api" value="ASP.NET Core API">
+            <label class="mt-1">ASP.NET Core API</label>
+        </p>
+        <p>
+            <input type="radio" asp-for="SelectedCourse" id="blazor" value="Blazor">
+            <label class="mt-1">Blazor</label>
+        </p>
+    </fieldset>
+
+    <div>
+        <button class="btn btn-primary mt-2" type="submit">Apply</button>
+        <a class="btn btn-warning mt-2" asp-controller="Home" asp-action="Index">Home</a>
+    </div>
+
+</form>
