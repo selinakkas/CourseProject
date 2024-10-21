@@ -13,7 +13,7 @@ namespace CourseProject.Controllers
         public IActionResult Apply()
         {
             return View();
-        }
+        } 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
